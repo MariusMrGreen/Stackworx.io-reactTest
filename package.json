@@ -16,6 +16,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-flexbox-grid": "^2.1.2",
+    "react-interval-renderer": "^1.0.1",
     "react-scripts": "3.4.1",
     "request": "^2.88.2",
     "typescript": "~3.7.2"

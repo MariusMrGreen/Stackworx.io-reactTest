@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import IntervalRenderer from 'react-interval-renderer';
 
 class Server extends Component {
     state = { 
@@ -8,7 +9,7 @@ class Server extends Component {
     };
 
     style = {
-        width : 250
+        width : 275
     }
 
     componentDidMount() {
