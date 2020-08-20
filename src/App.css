@@ -34,21 +34,21 @@
   align-items: center;
 }
 
-.up-status {
+.status-up {
   background-color:green ;
   padding: 10px ;
   margin-bottom: 10px;
   border: 1px solid green ;
 }
 
-.down-status {
+.status-down {
   background-color:red ;
   padding: 10px ;
   margin-bottom: 10px;
   border: 1px solid black ;
 }
 
-.unknown-status {
+.status-unknown {
   background-color:grey ;
   padding: 10px ;
   margin-bottom: 10px;
