@@ -2,16 +2,16 @@ import React, {Component} from 'react';
 
 class Server extends Component {
     state = { 
-        serverInfo: "unknown"
+        serverInfo: "unknown",
+        serverError: ""
     };
 
+    componentDidMount() {
+        this.setServerStatus(this.props.url);
+    }
      
     render() { 
-        
         let classes = this.getServerClass();
-        console.log(this.classes);
-
-        
         return ( 
             <div className={classes}>
           
@@ -31,13 +31,33 @@ class Server extends Component {
         }
         return classes;
     }
+
+    setServerStatus(endpointURL) {
+        const request = require('request');
+        request(endpointURL, function (error, response, body) {
+            console.log('Type of response: ' + typeof response);
+            if(typeof response === "undefined")
+            {
+                this.setState({serverInfo: 'unknown'});
+            } else {
+                if(error) {
+                    this.setState({serverInfo: 'unknown'});
+                }
+                else
+                {
+                    if(response.statusCode.toString().substring(0,1) === '2')
+                    {
+                        this.setState({serverInfo: 'up'});
+                    }
+                    else {
+                        this.setState({serverInfo: 'down'});
+                    }
+                }
+            }
+            
+        }.bind(this));
+    }
 }
  
 export default Server;
 
-// const request = require('request');
-// request('http://www.google.com', function (error, response, body) {
-//   console.error('error:', error); // Print the error if one occurred
-//   console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
-//   console.log('body:', body); // Print the HTML for the Google homepage.
-// });
