@@ -6,7 +6,7 @@ import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.css';
 
 
-
+tick();
   
 
   function tick() {
@@ -18,7 +18,7 @@ import 'bootstrap/dist/css/bootstrap.css';
     );
   }
   
-  setInterval(tick, 1000);
+  setInterval(tick, 300000);
   
 
 

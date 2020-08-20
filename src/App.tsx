@@ -15,7 +15,7 @@ function App() {
     "httpstat.us/200",
     "http://httpstat.us/201",
     "http://httpstat.us/202",
-    "http://httpstat.us/203",
+    "https://dev.vantage.run/health",
     "http://httpstat.us/204",
     "http://httptat.us/404",
     "http://httpstat.us/405",
@@ -27,9 +27,13 @@ function App() {
   return (
     
 			<GridGenerator cols={4}>
-      {endpointURLs.map(item => <Server key={item} url={item} />)}      
+      {
+        
+        endpointURLs.map((value, index) => {
+          return <Server key={value} url={value} serverId={index}></Server>
+        })
+      }
     </GridGenerator>
-    
   )
 }
 
