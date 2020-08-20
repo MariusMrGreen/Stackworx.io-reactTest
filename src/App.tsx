@@ -5,13 +5,22 @@ import { Col, Row, Grid } from 'react-flexbox-grid';
 import Server from './Components/server'
 
 function App() {
+  var endpointURLs = [
+    "http://httpstat.us/200",
+    "http://httpstat.us/300",
+    "http://httpstat.us/500",
+    "httpstat.us/200",
+    "http://httpstat.us/204",
+    "http://httpstat.us/404",
+    "http://www.google.com",
+
+  ]
   return(
     <GridGenerator cols={3}>
-      <Server url="http://httpstat.us/200" key="1"/>
-      <Server url="http://google.com" key="1"/>
-      <Server url="httpstat.us/200" key="1"/>
-      
+      {endpointURLs.map(item => <Server key={item} url={item} />)}      
     </GridGenerator>
   )
 }
+
+
 export default App;

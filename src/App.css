@@ -34,26 +34,6 @@
   align-items: center;
 }
 
-.status-up {
-  background-color:green ;
-  padding: 10px ;
-  margin-bottom: 10px;
-  border: 1px solid green ;
-}
-
-.status-down {
-  background-color:red ;
-  padding: 10px ;
-  margin-bottom: 10px;
-  border: 1px solid black ;
-}
-
-.status-unknown {
-  background-color:grey ;
-  padding: 10px ;
-  margin-bottom: 10px;
-  border: 1px solid black ;
-}
 
 @keyframes App-logo-spin {
   from {
