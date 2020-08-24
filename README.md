@@ -1,1 +1,1 @@
-Stackworx.io Technical Assessment - REactJS
+Stackworx.io Technical Assessment - ReactJS
